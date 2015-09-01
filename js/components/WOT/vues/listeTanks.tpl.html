@@ -1,0 +1,22 @@
+<div data-ng-controller="listeTanks">
+    <a href="#/accueil" class="btn btn-primary btn-lg">Accueil</a>
+    <p>Voici la liste des tanks !</p>
+    <table id="listeTanks">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NOM</th>
+          <th>TIER</th>
+          <th>NATION</th>
+        </tr>
+    </thead>
+      <tbody>
+          <tr ng-repeat="tank in data">
+            <td><a data-ng-href="#/caracTank/{{tank.tank_id}}"><span data-ng-bind='tank.tank_id'></span></a></td>
+            <td><span data-ng-bind='tank.short_name_i18n'></span></td>
+            <td><span data-ng-bind='tank.level'></span></td>
+            <td><span data-ng-bind='tank.nation_i18n'></span></td>
+          </tr>
+      </tbody>
+    </table>
+</div>

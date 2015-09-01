@@ -1,0 +1,8 @@
+<div data-ng-controller="pawsBreed">
+    <p>Ok, do you know what breed you prefer?</p>
+    <a href="#/app/animal" class="btn btn-primary btn-md"><span class="glyphicon glyphicon-arrow-left"></span> PREVIOUS</a>
+    <a href="#/app/size" class="btn btn-primary btn-md"><span class="glyphicon glyphicon-arrow-right"></span> NEXT</a>
+    <ul data-ng-repeat="breed in data.breeds">
+        <li ><span data-ng-bind='breed.$t'></span></li>
+    </ul>
+</div>

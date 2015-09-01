@@ -1,0 +1,49 @@
+<div data-ng-controller="caracTank">
+    <a data-ng-href="#/accueil" class="btn btn-primary btn-lg">Accueil</a>
+    <a data-ng-href="#/liste" class="btn btn-primary btn-lg">Retour à la liste</a>
+    <p>Voici les caractéristiques du  <span data-ng-bind='data.tank_id'></span> !</p>
+    <table id="caracTank">
+      <thead>
+          <tr>
+        <th>Vie</th>
+        <th>Vue</th>
+        <th>Signal</th>
+        <th>Canon(chargement, angle, visée)</th>
+        <th>Moteur(force, feu)</th>
+        <th>Vitesse(avant, arrière)</th>
+        <th>Blindage(avant, côtés, arrière)</th>
+          </tr>
+    </thead>
+      <tbody>
+          <tr>
+            <td><span data-ng-bind='data.hp'></span>hp</td>
+            <td><span data-ng-bind='data.turret.view_range'></span>m</td>
+            <td><span data-ng-bind='data.radio.signal_range'></span>m</td>
+            <td>
+                <span data-ng-bind='data.gun.reload_time'></span>s (-
+                <span data-ng-bind='data.gun.move_down_arc'></span> à
+                <span data-ng-bind='data.gun.move_up_arc'></span>)
+                <span data-ng-bind='data.gun.aim_time'></span>s
+            </td>
+            <td>
+                <span data-ng-bind='data.engine.power'></span>hp avec
+                <span data-ng-bind='data.engine.fire_chance'></span>%
+            </td>
+            <td>
+                <span data-ng-bind='data.speed_forward'></span>km/h
+                <span data-ng-bind='data.speed_backward'></span>km/h
+            </td>
+            <td>
+                caisse (<span data-ng-bind='data.armor.hull.front'></span>mm,
+                <span data-ng-bind='data.armor.hull.sides'></span>mm,
+                <span data-ng-bind='data.armor.hull.rear'></span>mm)
+            </td>
+            <td>
+                tourelle (<span data-ng-bind='data.armor.turret.front'></span>mm,
+                <span data-ng-bind='data.armor.turret.sides'></span>mm,
+                <span data-ng-bind='data.armor.turret.rear'></span>mm)
+            </td>
+          </tr>
+      </tbody>
+    </table>
+</div>
