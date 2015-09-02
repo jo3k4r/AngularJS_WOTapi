@@ -18,7 +18,7 @@ function($scope, $routeParams, $http, Data) {
 /*Liste tous les tanks*/
 WOTapiControlleurs.controller('listeTanks', ['$scope', '$routeParams', '$http', 'Data',
 function($scope, $routeParams, $http, Data) {
-    $http.get("https://api.worldoftanks.eu/wot/encyclopedia/tanks/?application_id=demo").success(function (response)
+    $http.get("https://api.worldoftanks.com/wot/encyclopedia/tanks/?application_id=demo").success(function (response)
     {
         $scope.data = response.data;
         $routeParams.ordre = 'level';
@@ -30,7 +30,7 @@ function($scope, $routeParams, $http, Data) {
 /*Liste les caracteristiques d'un tank specifique*/
 WOTapiControlleurs.controller('caracTank', ['$scope', '$routeParams', '$http', 'Data',
 function($scope, $routeParams, $http, Data) {
-    $http.get("https://api.worldoftanks.eu/wot/encyclopedia/vehicleprofile/?application_id=demo&tank_id="+$routeParams.tank_id).success(function (response)
+    $http.get("https://api.worldoftanks.com/wot/encyclopedia/vehicleprofile/?application_id=demo&tank_id="+$routeParams.tank_id).success(function (response)
     {
         $scope.data = response.data[$routeParams.tank_id];
         console.log($scope.data);

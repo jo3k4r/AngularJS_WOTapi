@@ -1,0 +1,33 @@
+Changements
+
+/*Changement Mineur*/
+1.0.1
+Changer les adresses pour celles du serveur nord-américain au lieu de celles du serveur européen
+
+
+/*Changement Mineur*/
+1.0.2
+Ajouter un tri sur les colonnes de la liste des tanks
+
+
+/*Changement Mineur*/
+1.0.3
+Ajouter une variable (nomTank) dans la variable globale (Data)
+Afficher (nomTank) dans les caractéristiques d'un tanks
+
+
+/*Changement Majeur*/
+1.1.0
+Permettre l'ajout de plusieurs tanks dans les caractéristiques des tanks
+Ajuster le tableau des caractéristiques des tanks pour afficher (nomTank) devant chaque tank
+Permettre d'ajouter ou supprimer un tank dans les caractéristiques de tanks
+
+
+/*Changement Majeur*/
+1.2.0
+Ajout d'un login
+
+
+/*Changement Mineur*/
+1.2.1
+Ajout de la sauvegarde de liste
