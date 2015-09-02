@@ -1,14 +1,14 @@
 
-    var pawsApp = angular.module("pawsApp", ['ngRoute', 'ngResource', 'pawsServices', 'pawsControllers']);
+    var WOTapiApp = angular.module("WOTapiApp", ['ngRoute', 'ngResource', 'WOTapiServices', 'WOTapiControlleurs']);
 
-    pawsApp.controller('mainController',
+    WOTapiApp.controller('principal',
     function($scope, $route, $routeParams, $location) {
         $scope.$route = $route;
         $scope.$location = $location;
         $scope.$routeParams = $routeParams;
     });
 
-    pawsApp.config(function($routeProvider) {
+    WOTapiApp.config(function($routeProvider) {
           $routeProvider
             .when('/accueil', {
             templateUrl: './js/components/WOT/home.tpl.html'
@@ -27,6 +27,6 @@
             });
     });
 
-    pawsApp.factory('Data', function () {
+    WOTapiApp.factory('Data', function () {
       return { message: "Variable Data globale" };
     });
